@@ -6,7 +6,7 @@ In this project we have done sentiment analysis along with offensive review dete
 For doing sentiment analysis we have used Convolutional Neural Networks for training the models.
 Our sentiment analyzer categorizes reviews into five groups: Negative, Semi-Negative, Neutral, Semi-Positive, and Positive.
 The files required to acheive this task are:
-1. https://github.com/224G5A3312/Project/blob/master/finalmodel.ipynb     --- contains the code for training the model
+1. https://github.com/subahan22/224G5A3312/blob/finalmodel.ipynb     --- contains the code for training the model
 2. https://github.com/204G1A0555/Project/blob/master/dsadd.csv            --- dataset which we used to train our model
 3. models we got from this finalmodel.ipynb 
    1. https://github.com/204G1A0555/Project/blob/master/model.h5
