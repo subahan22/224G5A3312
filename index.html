@@ -1,0 +1,376 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Website with Navigation</title>
+    <style>
+        /* CSS styles for navigation */
+        /* nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+         */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body >
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Field 2</a></li>
+            <li><a href="#">Field 3</a></li>
+            <li><a href="#">Field 4</a></li>
+            <li><a href="#">Field 5</a></li>
+        </ul>
+    </nav>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    {% for item in item_name %}
+    <h2 style="color: blue;background-color: #F0F0F0;"><strong>Sentence: {{item[0]}}</strong></h2>
+        <h3>positive: {{ item[1] }}</h3>
+        <h3>negative: {{ item[2] }}</h3>
+        <h3>neutral: {{ item[3] }}</h3>
+    {% endfor %}
+</body>
+</html>
+
+    
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Dark theme */
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for the navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            border-bottom: 1px solid #555;
+            text-align: center;
+        }
+
+        ul.navbar li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        ul.navbar li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Decorative elements */
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 36px;
+        }
+
+        .decorative-text {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: #999;
+        }
+
+        .decorative-box {
+            text-align: center;
+            margin: 40px auto;
+            width: 200px;
+            height: 200px;
+            background-color: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">isSuggestion</a></li>
+        <li><a href="#">isFake</a></li>
+        <li><a href="#">Polarity</a></li>
+        <li><a href="#">overallreview</a></li>
+    </ul>
+
+    <h2>Sentiment Analysis Results</h2>
+    {% for item in item_name %}
+    <h2 style="color: blue;background-color: #F0F0F0;"><strong>Sentence: {{item[0]}}</strong></h2>
+        <h3>positive: {{ item[1] }}</h3>
+        <h3>negative: {{ item[2] }}</h3>
+        <h3>neutral: {{ item[3] }}</h3>
+    {% endfor %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Dark theme */
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for the navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            border-bottom: 1px solid #555;
+            text-align: center;
+        }
+
+        ul.navbar li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        ul.navbar li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Decorative elements */
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 36px;
+        }
+
+        .decorative-text {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: #999;
+        }
+
+        .decorative-box {
+            text-align: center;
+            margin: 40px auto;
+            width: 200px;
+            height: 200px;
+            background-color: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        /* Content layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .result-box {
+            background-color: #F0F0F0;
+            color: blue;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .result-box strong {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .result-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .emoji {
+            font-size: 48px;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .result-box {
+            background-color: #F0F0F0;
+            color: blue;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .result-box strong {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .result-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        * moving text designs */
+.moving-text-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        
+        overflow: hidden;
+    }
+
+    .moving-text {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    /* paragraph style */
+
+    p{
+        color: aquamarine;
+    }
+/* body */
+body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <ul class="navbar">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('suggestion_analysis') }}">isSuggestion</a></li>
+        <li><a href="{{ url_for('fake_review_detection') }}">isOffensive</a></li>
+        <li><a href="{{ url_for('sentiment_analyze') }}">Polarity</a></li>
+        <li><a href="{{ url_for('sentiment_analysis') }}">OverallReview %</a></li>
+    </ul>
+    <div class="content">
+    <h2>Sentiment Analysis</h2>
+
+    <form method="post" action="/index">
+        <label for="sentence">Sentence:</label>
+        <input type="text" id="sentence" name="sentence" required placeholder="Enter your review/text
+        "><br><br>
+
+        <label for="sentiment">Sentiment:</label>
+        <select id="sentiment" name="sentiment" required>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="neutral">Neutral</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- {% if result %}
+    <h2 style="color: blue;background-color: #F0F0F0;"><strong>text: {{ result[1] }} <br/> percentage of {{result[2][:-1]}}ity with emoji: {{ result[0] }}</strong></h2>
+    {% endif %} -->
+<br/>
+<br/>
+<br/>
+{% if result %}
+<div class="result-box">
+    <strong>Text Entered: {{ result[1] }}</strong>
+    <div class="result-text">
+        Percentage of {{ result[2][:-1] }}ity with emoji in the given text:
+    </div>
+    <span class="emoji">{{ result[0] }}</span>
+</div>
+{% endif %}
+</div>
+    <!-- {% if result %}
+    <div class="result-box">
+        <strong>Text: {{ result[1] }}</strong><br>
+        <strong>Percentage of {{ result[2][:-1] }}ity with emoji: {{ result[0] }}</strong>
+    </div>
+    {% endif %} -->
+    <div class="moving-text-container">
+        <div class="moving-text">
+            <p >Team "AVID DEVS" from "Srinivasa Ramanujan Institute of Technology"</p>
+        </div>
+    </div>
+</body>
+</html>
